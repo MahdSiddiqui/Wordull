@@ -15,6 +15,7 @@ import { fileURLToPath } from "url";
 import path from "path";
 import bodyParser from "body-parser";
 import axios from "axios";
+import { time } from "console";
 
 
 const port = 3000;
@@ -42,6 +43,8 @@ app.get("/", async (req, res) => {
 
     res.render("index.ejs");
 
+    let timesSubmitted = 0;
+
     app.post("/submit", async (req, res) => {
         let userGuess = req.body["userGuess"];
         userGuess = userGuess.toUpperCase();
@@ -49,6 +52,8 @@ app.get("/", async (req, res) => {
         console.log(`userGuess: ${userGuess}`);
 
         if(userGuess.length == 5){
+
+            timesSubmitted++;
             
             let wordA = [word[0], word[1], word[2], word[3], word[4]];
             let userGuessA = [userGuess[0], userGuess[1], userGuess[2], userGuess[3],userGuess[4]];
@@ -56,6 +61,15 @@ app.get("/", async (req, res) => {
             console.log(userGuessA);
 
             let defaultColor = "#808080";
+
+            let colorsDimensionalArray = [
+                [defaultColor, defaultColor, defaultColor, defaultColor, defaultColor],
+                [defaultColor, defaultColor, defaultColor, defaultColor, defaultColor],
+                [defaultColor, defaultColor, defaultColor, defaultColor, defaultColor],
+                [defaultColor, defaultColor, defaultColor, defaultColor, defaultColor],
+                [defaultColor, defaultColor, defaultColor, defaultColor, defaultColor],
+                [defaultColor, defaultColor, defaultColor, defaultColor, defaultColor],
+            ]
 
             let firstLetterColor = "#808080";
             let secondLetterColor = "#808080";
@@ -88,7 +102,17 @@ app.get("/", async (req, res) => {
             } else{
                 fifthLetterColor = "#525252"
             }
-            
+
+            let rowColorArray = [firstLetterColor, secondLetterColor, thirdLetterColor, fourthLetterColor, fifthLetterColor];
+
+            for(let i = 0; i <= timesSubmitted; i++){
+                for(let j = 0; j <= 5; j++){
+                    colorsDimensionalArray[timesSubmitted-1][i] = rowColorArray[j];
+                }
+            }
+
+            console.log(colorsDimensionalArray);            
+
             let colorData = {firstLetterColor: firstLetterColor, secondLetterColor: secondLetterColor, thirdLetterColor: thirdLetterColor, fourthLetterColor: fourthLetterColor, fifthLetterColor: fifthLetterColor};
             
             if(userGuess == word){
