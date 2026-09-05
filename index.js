@@ -26,6 +26,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get("/", async (req, res) => {
 
+    // getting random word
     let gettingWord = await axios.get("https://random-word-api.herokuapp.com/word?length=5&diff=1");
     let word = gettingWord.data;
     word = word[0];
@@ -33,7 +34,7 @@ app.get("/", async (req, res) => {
     console.log(word);
 
     
-
+    // variables
     let guessesLeft = 6;
     let gameOver = false;
     let gameWon = false;
@@ -62,6 +63,7 @@ app.get("/", async (req, res) => {
 
             alphaDimensionalArray.push(userGuessA);
 
+        //getting alphabet
             if(timesSubmitted === 1){
     alphaData = {
         firstWordFirstAlpha: alphaDimensionalArray[0][0],
@@ -70,7 +72,7 @@ app.get("/", async (req, res) => {
         firstWordFourthAlpha: alphaDimensionalArray[0][3],
         firstWordFifthAlpha: alphaDimensionalArray[0][4]
     }
-} else if(timesSubmitted === 2){
+            } else if(timesSubmitted === 2){
     alphaData = {
         firstWordFirstAlpha: alphaDimensionalArray[0][0],
         firstWordSecondAlpha: alphaDimensionalArray[0][1],
@@ -84,7 +86,7 @@ app.get("/", async (req, res) => {
         secondWordFourthAlpha: alphaDimensionalArray[1][3],
         secondWordFifthAlpha: alphaDimensionalArray[1][4]
     }
-} else if(timesSubmitted === 3){
+            } else if(timesSubmitted === 3){
     alphaData = {
         firstWordFirstAlpha: alphaDimensionalArray[0][0],
         firstWordSecondAlpha: alphaDimensionalArray[0][1],
@@ -104,7 +106,7 @@ app.get("/", async (req, res) => {
         thirdWordFourthAlpha: alphaDimensionalArray[2][3],
         thirdWordFifthAlpha: alphaDimensionalArray[2][4]
     }
-} else if(timesSubmitted === 4){
+            } else if(timesSubmitted === 4){
     alphaData = {
         firstWordFirstAlpha: alphaDimensionalArray[0][0],
         firstWordSecondAlpha: alphaDimensionalArray[0][1],
@@ -130,7 +132,7 @@ app.get("/", async (req, res) => {
         fourthWordFourthAlpha: alphaDimensionalArray[3][3],
         fourthWordFifthAlpha: alphaDimensionalArray[3][4],
     }
-} else if(timesSubmitted === 5){
+            } else if(timesSubmitted === 5){
     alphaData = {
         firstWordFirstAlpha: alphaDimensionalArray[0][0],
         firstWordSecondAlpha: alphaDimensionalArray[0][1],
@@ -162,7 +164,7 @@ app.get("/", async (req, res) => {
         fifthWordFourthAlpha: alphaDimensionalArray[4][3],
         fifthWordFifthAlpha: alphaDimensionalArray[4][4]
     }
-} else if(timesSubmitted === 6){
+            } else if(timesSubmitted === 6){
     alphaData = {
         firstWordFirstAlpha: alphaDimensionalArray[0][0],
         firstWordSecondAlpha: alphaDimensionalArray[0][1],
@@ -200,12 +202,7 @@ app.get("/", async (req, res) => {
         sixthWordFourthAlpha: alphaDimensionalArray[5][3],
         sixthWordFifthAlpha: alphaDimensionalArray[5][4]
     }
-}   
-
-            //console.log(wordA);
-            //console.log(userGuessA);
-
-            
+}        
 
             let firstLetterColor = "#808080";
             let secondLetterColor = "#808080";
@@ -244,13 +241,8 @@ app.get("/", async (req, res) => {
             colorsDimensionalArray.push(rowColorArray);
 
             console.log(colorsDimensionalArray[0]);
-
-            // for(let i = 0; i <= timesSubmitted; i++){
-            //     for(let j = 0; j <= 5; j++){
-            //         colorsDimensionalArray[timesSubmitted-1][i] = rowColorArray[j];
-            //     }
-            // }           
-
+          
+            //getting color
             if(timesSubmitted === 1){
                 colorData = {
                 firstWordFirstLetter: colorsDimensionalArray[0][0],

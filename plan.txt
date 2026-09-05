@@ -1,0 +1,11 @@
+things that are left:
+
+1. making yellow square appear
+
+2. directing to fail/winning screen after faililng/winning - button to redirect back
+    - making those ejs files
+    - setting up https reqs for it
+
+3. fixing css for all webpages
+
+4...
