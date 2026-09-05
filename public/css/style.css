@@ -1,0 +1,27 @@
+
+body{
+    font-family: arial;
+}
+
+.mainContainerOfGrid{
+    display: flex;
+    justify-content: center;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 columns */
+  grid-template-rows: repeat(6, 1fr);    /* 6 rows */
+  gap: 3px;                            /* Space between squares */
+  width: 100%;
+  max-width: 400px;                     /* Optional max width */
+}
+
+.grid-item {
+  background-color: gray;
+  aspect-ratio: 1 / 1;                  /* Forces each item to be a square */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+}

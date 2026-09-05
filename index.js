@@ -25,8 +25,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get("/", async (req, res) => {
 
-    const word = await axios.get("https://random-word-api.herokuapp.com/word?length=5&diff=1");
-    console.log(word.data);
+    let gettingWord = await axios.get("https://random-word-api.herokuapp.com/word?length=5&diff=1");
+    let word = gettingWord.data;
+    word = word[0];
+    word = word.toUpperCase();
+    console.log(word);
 
     
 
@@ -39,11 +42,13 @@ app.get("/", async (req, res) => {
     res.render("index.ejs");
 
     app.post("/submit", async (req, res) => {
-        const userGuess = req.body["userGuess"];
-        console.log(userGuess);
+        let userGuess = req.body["userGuess"];
+        userGuess = userGuess.toUpperCase();
+
+        console.log(`userGuess: ${userGuess}`);
 
         
-        if(userGuess == word.data){
+        if(userGuess == word){
             guessesLeft--;
             console.log("won");
             gameWon = true;
