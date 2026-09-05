@@ -40,10 +40,11 @@ app.get("/", async (req, res) => {
     let finalStatement;
 
     let colorsDimensionalArray = [];
-
-    res.render("index.ejs");
+    let colorData = {};
 
     let timesSubmitted = 0;
+
+    res.render("index.ejs");
 
     app.post("/submit", async (req, res) => {
         let userGuess = req.body["userGuess"];
@@ -52,13 +53,12 @@ app.get("/", async (req, res) => {
         console.log(`userGuess: ${userGuess}`);
 
         if(userGuess.length == 5){
-
             timesSubmitted++;
             
             let wordA = [word[0], word[1], word[2], word[3], word[4]];
             let userGuessA = [userGuess[0], userGuess[1], userGuess[2], userGuess[3],userGuess[4]];
-            console.log(wordA);
-            console.log(userGuessA);
+            //console.log(wordA);
+            //console.log(userGuessA);
 
             let defaultColor = "#808080";
 
@@ -98,7 +98,7 @@ app.get("/", async (req, res) => {
 
             colorsDimensionalArray.push(rowColorArray);
 
-            console.log(colorsDimensionalArray);
+            console.log(colorsDimensionalArray[0]);
 
             // for(let i = 0; i <= timesSubmitted; i++){
             //     for(let j = 0; j <= 5; j++){
@@ -106,7 +106,143 @@ app.get("/", async (req, res) => {
             //     }
             // }           
 
-            let colorData = {firstLetterColor: firstLetterColor, secondLetterColor: secondLetterColor, thirdLetterColor: thirdLetterColor, fourthLetterColor: fourthLetterColor, fifthLetterColor: fifthLetterColor};
+            if(timesSubmitted === 1){
+                colorData = {
+                firstWordFirstLetter: colorsDimensionalArray[0][0],
+                firstWordSecondLetter: colorsDimensionalArray[0][1],
+                firstWordThirdLetter: colorsDimensionalArray[0][2],
+                firstWordFourthLetter: colorsDimensionalArray[0][3],
+                firstWordFifthLetter: colorsDimensionalArray[0][4]
+                }
+            } else if(timesSubmitted === 2){
+                colorData = {
+                firstWordFirstLetter: colorsDimensionalArray[0][0],
+                firstWordSecondLetter: colorsDimensionalArray[0][1],
+                firstWordThirdLetter: colorsDimensionalArray[0][2],
+                firstWordFourthLetter: colorsDimensionalArray[0][3],
+                firstWordFifthLetter: colorsDimensionalArray[0][4],
+                
+                secondWordFirstLetter: colorsDimensionalArray[1][0],
+                secondWordSecondLetter: colorsDimensionalArray[1][1],
+                secondWordThirdLetter: colorsDimensionalArray[1][2],
+                secondWordFourthLetter: colorsDimensionalArray[1][3],
+                secondWordFifthLetter: colorsDimensionalArray[1][4]}
+            } else if(timesSubmitted === 3){
+                colorData = {
+                firstWordFirstLetter: colorsDimensionalArray[0][0],
+                firstWordSecondLetter: colorsDimensionalArray[0][1],
+                firstWordThirdLetter: colorsDimensionalArray[0][2],
+                firstWordFourthLetter: colorsDimensionalArray[0][3],
+                firstWordFifthLetter: colorsDimensionalArray[0][4],
+                
+                secondWordFirstLetter: colorsDimensionalArray[1][0],
+                secondWordSecondLetter: colorsDimensionalArray[1][1],
+                secondWordThirdLetter: colorsDimensionalArray[1][2],
+                secondWordFourthLetter: colorsDimensionalArray[1][3],
+                secondWordFifthLetter: colorsDimensionalArray[1][4],
+                
+                thirdWordFirstLetter: colorsDimensionalArray[2][0],
+                thirdWordSecondLetter: colorsDimensionalArray[2][1],
+                thirdWordThirdLetter: colorsDimensionalArray[2][2],
+                thirdWordFourthLetter: colorsDimensionalArray[2][3],
+                thirdWordFifthLetter: colorsDimensionalArray[2][4]}
+            } else if(timesSubmitted === 4){
+                colorData = {
+                firstWordFirstLetter: colorsDimensionalArray[0][0],
+                firstWordSecondLetter: colorsDimensionalArray[0][1],
+                firstWordThirdLetter: colorsDimensionalArray[0][2],
+                firstWordFourthLetter: colorsDimensionalArray[0][3],
+                firstWordFifthLetter: colorsDimensionalArray[0][4],
+                
+                secondWordFirstLetter: colorsDimensionalArray[1][0],
+                secondWordSecondLetter: colorsDimensionalArray[1][1],
+                secondWordThirdLetter: colorsDimensionalArray[1][2],
+                secondWordFourthLetter: colorsDimensionalArray[1][3],
+                secondWordFifthLetter: colorsDimensionalArray[1][4],
+                
+                thirdWordFirstLetter: colorsDimensionalArray[2][0],
+                thirdWordSecondLetter: colorsDimensionalArray[2][1],
+                thirdWordThirdLetter: colorsDimensionalArray[2][2],
+                thirdWordFourthLetter: colorsDimensionalArray[2][3],
+                thirdWordFifthLetter: colorsDimensionalArray[2][4],
+                
+                fourthWordFirstLetter: colorsDimensionalArray[3][0],
+                fourthWordSecondLetter: colorsDimensionalArray[3][1],
+                fourthWordThirdLetter: colorsDimensionalArray[3][2],
+                fourthWordFourthLetter: colorsDimensionalArray[3][3],
+                fourthWordFifthLetter: colorsDimensionalArray[3][4]}
+            } else if(timesSubmitted === 5){
+                colorData = {
+                firstWordFirstLetter: colorsDimensionalArray[0][0],
+                firstWordSecondLetter: colorsDimensionalArray[0][1],
+                firstWordThirdLetter: colorsDimensionalArray[0][2],
+                firstWordFourthLetter: colorsDimensionalArray[0][3],
+                firstWordFifthLetter: colorsDimensionalArray[0][4],
+                
+                secondWordFirstLetter: colorsDimensionalArray[1][0],
+                secondWordSecondLetter: colorsDimensionalArray[1][1],
+                secondWordThirdLetter: colorsDimensionalArray[1][2],
+                secondWordFourthLetter: colorsDimensionalArray[1][3],
+                secondWordFifthLetter: colorsDimensionalArray[1][4],
+                
+                thirdWordFirstLetter: colorsDimensionalArray[2][0],
+                thirdWordSecondLetter: colorsDimensionalArray[2][1],
+                thirdWordThirdLetter: colorsDimensionalArray[2][2],
+                thirdWordFourthLetter: colorsDimensionalArray[2][3],
+                thirdWordFifthLetter: colorsDimensionalArray[2][4],
+                
+                fourthWordFirstLetter: colorsDimensionalArray[3][0],
+                fourthWordSecondLetter: colorsDimensionalArray[3][1],
+                fourthWordThirdLetter: colorsDimensionalArray[3][2],
+                fourthWordFourthLetter: colorsDimensionalArray[3][3],
+                fourthWordFifthLetter: colorsDimensionalArray[3][4],
+                
+                fifthWordFirstLetter: colorsDimensionalArray[4][0],
+                fifthWordSecondLetter: colorsDimensionalArray[4][1],
+                fifthWordThirdLetter: colorsDimensionalArray[4][2],
+                fifthWordFourthLetter: colorsDimensionalArray[4][3],
+                fifthWordFifthLetter: colorsDimensionalArray[4][4]}
+            } else if(timesSubmitted === 6){
+                colorData = {
+                firstWordFirstLetter: colorsDimensionalArray[0][0],
+                firstWordSecondLetter: colorsDimensionalArray[0][1],
+                firstWordThirdLetter: colorsDimensionalArray[0][2],
+                firstWordFourthLetter: colorsDimensionalArray[0][3],
+                firstWordFifthLetter: colorsDimensionalArray[0][4],
+                
+                secondWordFirstLetter: colorsDimensionalArray[1][0],
+                secondWordSecondLetter: colorsDimensionalArray[1][1],
+                secondWordThirdLetter: colorsDimensionalArray[1][2],
+                secondWordFourthLetter: colorsDimensionalArray[1][3],
+                secondWordFifthLetter: colorsDimensionalArray[1][4],
+                
+                thirdWordFirstLetter: colorsDimensionalArray[2][0],
+                thirdWordSecondLetter: colorsDimensionalArray[2][1],
+                thirdWordThirdLetter: colorsDimensionalArray[2][2],
+                thirdWordFourthLetter: colorsDimensionalArray[2][3],
+                thirdWordFifthLetter: colorsDimensionalArray[2][4],
+                
+                fourthWordFirstLetter: colorsDimensionalArray[3][0],
+                fourthWordSecondLetter: colorsDimensionalArray[3][1],
+                fourthWordThirdLetter: colorsDimensionalArray[3][2],
+                fourthWordFourthLetter: colorsDimensionalArray[3][3],
+                fourthWordFifthLetter: colorsDimensionalArray[3][4],
+                
+                fifthWordFirstLetter: colorsDimensionalArray[4][0],
+                fifthWordSecondLetter: colorsDimensionalArray[4][1],
+                fifthWordThirdLetter: colorsDimensionalArray[4][2],
+                fifthWordFourthLetter: colorsDimensionalArray[4][3],
+                fifthWordFifthLetter: colorsDimensionalArray[4][4],
+                
+                sixthWordFirstLetter: colorsDimensionalArray[5][0],
+                sixthWordSecondLetter: colorsDimensionalArray[5][1],
+                sixthWordThirdLetter: colorsDimensionalArray[5][2],
+                sixthWordFourthLetter: colorsDimensionalArray[5][3],
+                sixthWordFifthLetter: colorsDimensionalArray[5][4],
+            };
+            }
+
+            
             
             if(userGuess == word){
                 guessesLeft--;
@@ -126,7 +262,7 @@ app.get("/", async (req, res) => {
                     gameOver = true;
                     finalStatement = `Game Lost...`;
                 }
-            } 
+            }
         
 
         if(!gameOver){
