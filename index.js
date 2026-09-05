@@ -47,26 +47,26 @@ app.get("/", async (req, res) => {
 
         console.log(`userGuess: ${userGuess}`);
 
-        
-        if(userGuess == word){
-            guessesLeft--;
-            console.log("won");
-            gameWon = true;
-            console.log(`Game won - took ${6-guessesLeft} guesses`);
-            gameOver = true;
-            finalStatement = `Game Won! in ${6-guessesLeft} Guesses`;
-        } else{
-            if(guessesLeft > 1){
+        if(userGuess.length == 5){
+            if(userGuess == word){
                 guessesLeft--;
-                console.log(`Wrong - ${guessesLeft} guesses left`);
-            }
-            else{
-                console.log("last try was wrong");
+                console.log("won");
+                gameWon = true;
+                console.log(`Game won - took ${6-guessesLeft} guesses`);
                 gameOver = true;
-                finalStatement = `Game Lost...`;
-            }
-            
-        }
+                finalStatement = `Game Won! in ${6-guessesLeft} Guesses`;
+            } else{
+                if(guessesLeft > 1){
+                    guessesLeft--;
+                    console.log(`Wrong - ${guessesLeft} guesses left`);
+                }
+                else{
+                    console.log("last try was wrong");
+                    gameOver = true;
+                    finalStatement = `Game Lost...`;
+                }
+            } 
+        } 
 
         if(!gameOver){
             res.render("index.ejs", {guessesLeft: guessesLeft});
@@ -74,6 +74,9 @@ app.get("/", async (req, res) => {
         else{
             res.render("index.ejs", {finalStatement: finalStatement, guessesLeft: guessesLeft});
         }
+
+    
+        
 
         console.log(guessesLeft);
     });
