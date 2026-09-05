@@ -21,10 +21,10 @@
     <div class="grid-container">
   
         <div <% if(locals.colorData){ %> style="background-color: <%=colorData.firstLetterColor%>" <% } %> class="grid-item"></div>
-        <div class="grid-item"></div>
-        <div class="grid-item"></div>
-        <div class="grid-item"></div>
-        <div class="grid-item"></div>
+        <div <% if(locals.colorData){ %> style="background-color: <%=colorData.secondLetterColor%>" <% } %> class="grid-item"></div>
+        <div <% if(locals.colorData){ %> style="background-color: <%=colorData.thirdLetterColor%>" <% } %> class="grid-item"></div>
+        <div <% if(locals.colorData){ %> style="background-color: <%=colorData.fourthLetterColor%>" <% } %> class="grid-item"></div>
+        <div <% if(locals.colorData){ %> style="background-color: <%=colorData.fifthLetterColor%>" <% } %> class="grid-item"></div>
         <div class="grid-item"></div>
         <div class="grid-item"></div>
         <div class="grid-item"></div>

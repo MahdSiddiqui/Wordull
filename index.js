@@ -55,11 +55,13 @@ app.get("/", async (req, res) => {
             console.log(wordA);
             console.log(userGuessA);
 
-            let firstLetterColor = "808080";
-            let secondLetterColor = "808080";
-            let thirdLetterColor = "808080";
-            let fourthLetterColor = "808080";
-            let fifthLetterColor = "808080";
+            let defaultColor = "#808080";
+
+            let firstLetterColor = "#808080";
+            let secondLetterColor = "#808080";
+            let thirdLetterColor = "#808080";
+            let fourthLetterColor = "#808080";
+            let fifthLetterColor = "#808080";
 
             if(wordA[0] === userGuessA[0]){
                 firstLetterColor = "#20B41D";
@@ -114,7 +116,7 @@ app.get("/", async (req, res) => {
             res.render("index.ejs", {guessesLeft: guessesLeft, colorData});
         }
         else{
-            res.render("index.ejs", {finalStatement: finalStatement, guessesLeft: guessesLeft});
+            res.render("index.ejs", {finalStatement: finalStatement, guessesLeft: guessesLeft, colorData});
         }
 
     
