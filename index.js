@@ -39,7 +39,7 @@ app.get("/", async (req, res) => {
     let gameWon = false;
     let finalStatement;
 
-    
+    let colorsDimensionalArray = [];
 
     res.render("index.ejs");
 
@@ -61,15 +61,6 @@ app.get("/", async (req, res) => {
             console.log(userGuessA);
 
             let defaultColor = "#808080";
-
-            let colorsDimensionalArray = [
-                [defaultColor, defaultColor, defaultColor, defaultColor, defaultColor],
-                [defaultColor, defaultColor, defaultColor, defaultColor, defaultColor],
-                [defaultColor, defaultColor, defaultColor, defaultColor, defaultColor],
-                [defaultColor, defaultColor, defaultColor, defaultColor, defaultColor],
-                [defaultColor, defaultColor, defaultColor, defaultColor, defaultColor],
-                [defaultColor, defaultColor, defaultColor, defaultColor, defaultColor],
-            ]
 
             let firstLetterColor = "#808080";
             let secondLetterColor = "#808080";
@@ -105,13 +96,15 @@ app.get("/", async (req, res) => {
 
             let rowColorArray = [firstLetterColor, secondLetterColor, thirdLetterColor, fourthLetterColor, fifthLetterColor];
 
-            for(let i = 0; i <= timesSubmitted; i++){
-                for(let j = 0; j <= 5; j++){
-                    colorsDimensionalArray[timesSubmitted-1][i] = rowColorArray[j];
-                }
-            }
+            colorsDimensionalArray.push(rowColorArray);
 
-            console.log(colorsDimensionalArray);            
+            console.log(colorsDimensionalArray);
+
+            // for(let i = 0; i <= timesSubmitted; i++){
+            //     for(let j = 0; j <= 5; j++){
+            //         colorsDimensionalArray[timesSubmitted-1][i] = rowColorArray[j];
+            //     }
+            // }           
 
             let colorData = {firstLetterColor: firstLetterColor, secondLetterColor: secondLetterColor, thirdLetterColor: thirdLetterColor, fourthLetterColor: fourthLetterColor, fifthLetterColor: fifthLetterColor};
             
