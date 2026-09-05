@@ -41,6 +41,8 @@ app.get("/", async (req, res) => {
 
     let colorsDimensionalArray = [];
     let colorData = {};
+    let alphaDimensionalArray = [];
+    let alphaData = {};
 
     let timesSubmitted = 0;
 
@@ -57,10 +59,153 @@ app.get("/", async (req, res) => {
             
             let wordA = [word[0], word[1], word[2], word[3], word[4]];
             let userGuessA = [userGuess[0], userGuess[1], userGuess[2], userGuess[3],userGuess[4]];
+
+            alphaDimensionalArray.push(userGuessA);
+
+            if(timesSubmitted === 1){
+    alphaData = {
+        firstWordFirstAlpha: alphaDimensionalArray[0][0],
+        firstWordSecondAlpha: alphaDimensionalArray[0][1],
+        firstWordThirdAlpha: alphaDimensionalArray[0][2],
+        firstWordFourthAlpha: alphaDimensionalArray[0][3],
+        firstWordFifthAlpha: alphaDimensionalArray[0][4]
+    }
+} else if(timesSubmitted === 2){
+    alphaData = {
+        firstWordFirstAlpha: alphaDimensionalArray[0][0],
+        firstWordSecondAlpha: alphaDimensionalArray[0][1],
+        firstWordThirdAlpha: alphaDimensionalArray[0][2],
+        firstWordFourthAlpha: alphaDimensionalArray[0][3],
+        firstWordFifthAlpha: alphaDimensionalArray[0][4],
+
+        secondWordFirstAlpha: alphaDimensionalArray[1][0],
+        secondWordSecondAlpha: alphaDimensionalArray[1][1],
+        secondWordThirdAlpha: alphaDimensionalArray[1][2],
+        secondWordFourthAlpha: alphaDimensionalArray[1][3],
+        secondWordFifthAlpha: alphaDimensionalArray[1][4]
+    }
+} else if(timesSubmitted === 3){
+    alphaData = {
+        firstWordFirstAlpha: alphaDimensionalArray[0][0],
+        firstWordSecondAlpha: alphaDimensionalArray[0][1],
+        firstWordThirdAlpha: alphaDimensionalArray[0][2],
+        firstWordFourthAlpha: alphaDimensionalArray[0][3],
+        firstWordFifthAlpha: alphaDimensionalArray[0][4],
+
+        secondWordFirstAlpha: alphaDimensionalArray[1][0],
+        secondWordSecondAlpha: alphaDimensionalArray[1][1],
+        secondWordThirdAlpha: alphaDimensionalArray[1][2],
+        secondWordFourthAlpha: alphaDimensionalArray[1][3],
+        secondWordFifthAlpha: alphaDimensionalArray[1][4],
+
+        thirdWordFirstAlpha: alphaDimensionalArray[2][0],
+        thirdWordSecondAlpha: alphaDimensionalArray[2][1],
+        thirdWordThirdAlpha: alphaDimensionalArray[2][2],
+        thirdWordFourthAlpha: alphaDimensionalArray[2][3],
+        thirdWordFifthAlpha: alphaDimensionalArray[2][4]
+    }
+} else if(timesSubmitted === 4){
+    alphaData = {
+        firstWordFirstAlpha: alphaDimensionalArray[0][0],
+        firstWordSecondAlpha: alphaDimensionalArray[0][1],
+        firstWordThirdAlpha: alphaDimensionalArray[0][2],
+        firstWordFourthAlpha: alphaDimensionalArray[0][3],
+        firstWordFifthAlpha: alphaDimensionalArray[0][4],
+
+        secondWordFirstAlpha: alphaDimensionalArray[1][0],
+        secondWordSecondAlpha: alphaDimensionalArray[1][1],
+        secondWordThirdAlpha: alphaDimensionalArray[1][2],
+        secondWordFourthAlpha: alphaDimensionalArray[1][3],
+        secondWordFifthAlpha: alphaDimensionalArray[1][4],
+
+        thirdWordFirstAlpha: alphaDimensionalArray[2][0],
+        thirdWordSecondAlpha: alphaDimensionalArray[2][1],
+        thirdWordThirdAlpha: alphaDimensionalArray[2][2],
+        thirdWordFourthAlpha: alphaDimensionalArray[2][3],
+        thirdWordFifthAlpha: alphaDimensionalArray[2][4],
+
+        fourthWordFirstAlpha: alphaDimensionalArray[3][0],
+        fourthWordSecondAlpha: alphaDimensionalArray[3][1],
+        fourthWordThirdAlpha: alphaDimensionalArray[3][2],
+        fourthWordFourthAlpha: alphaDimensionalArray[3][3],
+        fourthWordFifthAlpha: alphaDimensionalArray[3][4],
+    }
+} else if(timesSubmitted === 5){
+    alphaData = {
+        firstWordFirstAlpha: alphaDimensionalArray[0][0],
+        firstWordSecondAlpha: alphaDimensionalArray[0][1],
+        firstWordThirdAlpha: alphaDimensionalArray[0][2],
+        firstWordFourthAlpha: alphaDimensionalArray[0][3],
+        firstWordFifthAlpha: alphaDimensionalArray[0][4],
+
+        secondWordFirstAlpha: alphaDimensionalArray[1][0],
+        secondWordSecondAlpha: alphaDimensionalArray[1][1],
+        secondWordThirdAlpha: alphaDimensionalArray[1][2],
+        secondWordFourthAlpha: alphaDimensionalArray[1][3],
+        secondWordFifthAlpha: alphaDimensionalArray[1][4],
+
+        thirdWordFirstAlpha: alphaDimensionalArray[2][0],
+        thirdWordSecondAlpha: alphaDimensionalArray[2][1],
+        thirdWordThirdAlpha: alphaDimensionalArray[2][2],
+        thirdWordFourthAlpha: alphaDimensionalArray[2][3],
+        thirdWordFifthAlpha: alphaDimensionalArray[2][4],
+
+        fourthWordFirstAlpha: alphaDimensionalArray[3][0],
+        fourthWordSecondAlpha: alphaDimensionalArray[3][1],
+        fourthWordThirdAlpha: alphaDimensionalArray[3][2],
+        fourthWordFourthAlpha: alphaDimensionalArray[3][3],
+        fourthWordFifthAlpha: alphaDimensionalArray[3][4],
+
+        fifthWordFirstAlpha: alphaDimensionalArray[4][0],
+        fifthWordSecondAlpha: alphaDimensionalArray[4][1],
+        fifthWordThirdAlpha: alphaDimensionalArray[4][2],
+        fifthWordFourthAlpha: alphaDimensionalArray[4][3],
+        fifthWordFifthAlpha: alphaDimensionalArray[4][4]
+    }
+} else if(timesSubmitted === 6){
+    alphaData = {
+        firstWordFirstAlpha: alphaDimensionalArray[0][0],
+        firstWordSecondAlpha: alphaDimensionalArray[0][1],
+        firstWordThirdAlpha: alphaDimensionalArray[0][2],
+        firstWordFourthAlpha: alphaDimensionalArray[0][3],
+        firstWordFifthAlpha: alphaDimensionalArray[0][4],
+
+        secondWordFirstAlpha: alphaDimensionalArray[1][0],
+        secondWordSecondAlpha: alphaDimensionalArray[1][1],
+        secondWordThirdAlpha: alphaDimensionalArray[1][2],
+        secondWordFourthAlpha: alphaDimensionalArray[1][3],
+        secondWordFifthAlpha: alphaDimensionalArray[1][4],
+
+        thirdWordFirstAlpha: alphaDimensionalArray[2][0],
+        thirdWordSecondAlpha: alphaDimensionalArray[2][1],
+        thirdWordThirdAlpha: alphaDimensionalArray[2][2],
+        thirdWordFourthAlpha: alphaDimensionalArray[2][3],
+        thirdWordFifthAlpha: alphaDimensionalArray[2][4],
+
+        fourthWordFirstAlpha: alphaDimensionalArray[3][0],
+        fourthWordSecondAlpha: alphaDimensionalArray[3][1],
+        fourthWordThirdAlpha: alphaDimensionalArray[3][2],
+        fourthWordFourthAlpha: alphaDimensionalArray[3][3],
+        fourthWordFifthAlpha: alphaDimensionalArray[3][4],
+
+        fifthWordFirstAlpha: alphaDimensionalArray[4][0],
+        fifthWordSecondAlpha: alphaDimensionalArray[4][1],
+        fifthWordThirdAlpha: alphaDimensionalArray[4][2],
+        fifthWordFourthAlpha: alphaDimensionalArray[4][3],
+        fifthWordFifthAlpha: alphaDimensionalArray[4][4],
+
+        sixthWordFirstAlpha: alphaDimensionalArray[5][0],
+        sixthWordSecondAlpha: alphaDimensionalArray[5][1],
+        sixthWordThirdAlpha: alphaDimensionalArray[5][2],
+        sixthWordFourthAlpha: alphaDimensionalArray[5][3],
+        sixthWordFifthAlpha: alphaDimensionalArray[5][4]
+    }
+}   
+
             //console.log(wordA);
             //console.log(userGuessA);
 
-            let defaultColor = "#808080";
+            
 
             let firstLetterColor = "#808080";
             let secondLetterColor = "#808080";
@@ -266,10 +411,10 @@ app.get("/", async (req, res) => {
         
 
         if(!gameOver){
-            res.render("index.ejs", {guessesLeft: guessesLeft, colorData});
+            res.render("index.ejs", {guessesLeft: guessesLeft, colorData, alphaData});
         }
         else{
-            res.render("index.ejs", {finalStatement: finalStatement, guessesLeft: guessesLeft, colorData});
+            res.render("index.ejs", {finalStatement: finalStatement, guessesLeft: guessesLeft, colorData, alphaData});
         }
 
     
