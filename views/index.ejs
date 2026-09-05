@@ -20,7 +20,7 @@
     <div class="mainContainerOfGrid">
     <div class="grid-container">
   
-        <div class="grid-item"></div>
+        <div <% if(locals.colorData){ %> style="background-color: <%=colorData.firstLetterColor%>" <% } %> class="grid-item"></div>
         <div class="grid-item"></div>
         <div class="grid-item"></div>
         <div class="grid-item"></div>

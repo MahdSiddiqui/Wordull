@@ -17,7 +17,7 @@ body{
 }
 
 .grid-item {
-  background-color: gray;
+  background-color: #808080;
   aspect-ratio: 1 / 1;                  /* Forces each item to be a square */
   display: flex;
   align-items: center;

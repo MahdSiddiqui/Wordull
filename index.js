@@ -36,8 +36,9 @@ app.get("/", async (req, res) => {
     let guessesLeft = 6;
     let gameOver = false;
     let gameWon = false;
-
     let finalStatement;
+
+    
 
     res.render("index.ejs");
 
@@ -48,13 +49,54 @@ app.get("/", async (req, res) => {
         console.log(`userGuess: ${userGuess}`);
 
         if(userGuess.length == 5){
+            
+            let wordA = [word[0], word[1], word[2], word[3], word[4]];
+            let userGuessA = [userGuess[0], userGuess[1], userGuess[2], userGuess[3],userGuess[4]];
+            console.log(wordA);
+            console.log(userGuessA);
+
+            let firstLetterColor = "808080";
+            let secondLetterColor = "808080";
+            let thirdLetterColor = "808080";
+            let fourthLetterColor = "808080";
+            let fifthLetterColor = "808080";
+
+            if(wordA[0] === userGuessA[0]){
+                firstLetterColor = "#20B41D";
+            } else{
+                firstLetterColor = "#525252"
+            }
+            if(wordA[1] === userGuessA[1]){
+                secondLetterColor = "#20B41D";
+            } else{
+                secondLetterColor = "#525252"
+            }
+            if(wordA[2] === userGuessA[2]){
+                thirdLetterColor = "#20B41D";
+            } else{
+                thirdLetterColor = "#525252"
+            }
+            if(wordA[3] === userGuessA[3]){
+                fourthLetterColor = "#20B41D";
+            } else{
+                fourthLetterColor = "#525252"
+            }
+            if(wordA[4] === userGuessA[4]){
+                fifthLetterColor = "#20B41D";
+            } else{
+                fifthLetterColor = "#525252"
+            }
+            
+            let colorData = {firstLetterColor: firstLetterColor, secondLetterColor: secondLetterColor, thirdLetterColor: thirdLetterColor, fourthLetterColor: fourthLetterColor, fifthLetterColor: fifthLetterColor};
+            
             if(userGuess == word){
                 guessesLeft--;
-                console.log("won");
                 gameWon = true;
-                console.log(`Game won - took ${6-guessesLeft} guesses`);
                 gameOver = true;
+
+                console.log(`Game won - took ${6-guessesLeft} guesses`);
                 finalStatement = `Game Won! in ${6-guessesLeft} Guesses`;
+
             } else{
                 if(guessesLeft > 1){
                     guessesLeft--;
@@ -66,17 +108,17 @@ app.get("/", async (req, res) => {
                     finalStatement = `Game Lost...`;
                 }
             } 
-        } 
+        
 
         if(!gameOver){
-            res.render("index.ejs", {guessesLeft: guessesLeft});
+            res.render("index.ejs", {guessesLeft: guessesLeft, colorData});
         }
         else{
             res.render("index.ejs", {finalStatement: finalStatement, guessesLeft: guessesLeft});
         }
 
     
-        
+        }
 
         console.log(guessesLeft);
     });
