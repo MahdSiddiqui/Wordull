@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordull</title>
+</head>
+<body>
+
+    <h1> <% if(locals.finalStatement){ %> <%= finalStatement %> <% } else{ %> Guess the Word <% } %></h1>
+    <p>Guesses Left: <% if(locals.guessesLeft){ %> <%=guessesLeft%> <% } %> </p>
+
+
+    <form action="/submit" method="POST">
+        <input type="text" name="userGuess" placeholder="guess">
+        <input class="submit" type="submit" value="OK">
+    </form>
+
+
+</body>
+</html>
