@@ -34,6 +34,7 @@ app.get("/", async (req, res) => {
     console.log(word);
 
     
+
     // variables
     let guessesLeft = 6;
     let gameOver = false;
@@ -51,6 +52,27 @@ app.get("/", async (req, res) => {
     let userGuessA = [];
     
     let userGuess;
+
+    async function resetAllData(){
+        word = "";
+        gettingWord = await axios.get("https://random-word-api.herokuapp.com/word?length=5&diff=1");
+        word = gettingWord.data;
+        word = word[0];
+        word = word.toUpperCase();
+        guessesLeft = 6;
+        gameOver = false;
+        gameWon = false;
+        finalStatement = "";
+        colorsDimensionalArray = [];
+        colorData = {};
+        alphaDimensionalArray = [];
+        alphaData = {};
+        timesSubmitted = 0;
+        wordA = [];
+        userGuessA = [];
+        userGuess = "";
+
+    }
 
     res.render("index.ejs");
 
@@ -450,7 +472,8 @@ app.get("/", async (req, res) => {
             };
             }
 
-            
+            console.log(`test user guess: ${userGuess}`);
+            console.log(`test word: ${word}`);
             
             if(userGuess == word){
                 guessesLeft--;
@@ -459,6 +482,8 @@ app.get("/", async (req, res) => {
 
                 console.log(`Game won - took ${6-guessesLeft} guesses`);
                 finalStatement = `Game Won! in ${6-guessesLeft} Guesses`;
+
+                
 
 
             } else{
@@ -481,9 +506,11 @@ app.get("/", async (req, res) => {
             //res.render("index.ejs", {finalStatement: finalStatement, guessesLeft: guessesLeft, colorData, alphaData});
             if(gameWon){
                 res.render("win.ejs", {finalStatement: finalStatement, guessesLeft: guessesLeft, word});
+                resetAllData();
             }
             else{
                 res.render("fail.ejs", {finalStatement: finalStatement, guessesLeft: guessesLeft, word: word, userGuess: userGuess});
+                resetAllData();
             }
         }
 
