@@ -4,15 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wordull Win</title>
+    <link rel="stylesheet" href="css/winFail.css">
 </head>
 <body>
     
+    <div class="mainContainer">
+        <div class="semiContainer">
+            <div class="infoContainer">
+                <p>Congratulations!</p>
+                <p>The word was <%= word %></p>
+                <p>You guessed the word in <%=6-guessesLeft%> guesses</p>
+            </div>
+            
+            <div class="formContainer">
+                <form action="/playAgain" method="GET">
+                    <button type="submit">PLAY AGAIN</button>
+                </form>
+            </div>
+        </div>
+    </div>
 
-    <p>You Won! You guessed right. the word was <%= word %>. you guessed the word in <%= 6-guessesLeft %> guesses</p>
-
-    <form action="/playAgain" method="GET">
-        <button type="submit">PLAY AGAIN</button>
-    </form>
+    
 
 </body>
 </html>

@@ -1,19 +1,29 @@
 
 body{
     font-family: arial;
+    background-color: #38383a;
 }
-
+.mainContainer{
+  display: flex;
+  justify-content: center;
+}
 .mainContainerOfGrid{
     display: flex;
     justify-content: center;
 }
+.semiMainContainer{
+  background-color: #121213;
+  height: 900px;
+  width: 700px;
+}
 .grid-container {
+  margin-top: 70px;
+  background-color: #121213;
   display: grid;
   grid-template-columns: repeat(5, 1fr); /* 5 columns */
   grid-template-rows: repeat(6, 1fr);    /* 6 rows */
   gap: 3px;                            /* Space between squares */
-  width: 100%;
-  max-width: 400px;                     /* Optional max width */
+  width: 400px;                     /* Optional max width */
 }
 
 .grid-item {
@@ -24,4 +34,46 @@ body{
   justify-content: center;
   color: white;
   font-weight: bold;
+}
+.infoContainer{
+  text-align: center;
+  margin-top: 70px;
+}
+.guessI{
+  text-align: center;
+  border: 2px solid antiquewhite;
+  background-color: #121213;
+  width: 350px;
+  height: 40px;
+  color: antiquewhite;
+  font-size: 20px;
+}
+input:focus {
+    outline: none;
+    box-shadow: none;
+}
+.btnI{
+    border: 3px solid antiquewhite;
+    background-color: #121213;
+    color: antiquewhite;
+    width: 250px;
+    height: 50px;
+    border-radius: 20px;
+    margin-top: 30px;
+    font-size: 25px;
+    transition-duration: 0.2s;
+}   
+.btnI:hover{
+    background-color: antiquewhite;
+    width: 260px;
+    height: 60px;
+    color: #121213;
+    transition-duration: 0.2s;
+    font-size: 27px;
+}
+.guessesLeftContainer{
+
+}
+.guessesLeft{
+  color: antiquewhite;
 }
