@@ -65,143 +65,143 @@ app.get("/", async (req, res) => {
 
         //getting alphabet
             if(timesSubmitted === 1){
-    alphaData = {
-        firstWordFirstAlpha: alphaDimensionalArray[0][0],
-        firstWordSecondAlpha: alphaDimensionalArray[0][1],
-        firstWordThirdAlpha: alphaDimensionalArray[0][2],
-        firstWordFourthAlpha: alphaDimensionalArray[0][3],
-        firstWordFifthAlpha: alphaDimensionalArray[0][4]
-    }
+                alphaData = {
+                    firstWordFirstAlpha: alphaDimensionalArray[0][0],
+                    firstWordSecondAlpha: alphaDimensionalArray[0][1],
+                    firstWordThirdAlpha: alphaDimensionalArray[0][2],
+                    firstWordFourthAlpha: alphaDimensionalArray[0][3],
+                    firstWordFifthAlpha: alphaDimensionalArray[0][4]
+                }
             } else if(timesSubmitted === 2){
-    alphaData = {
-        firstWordFirstAlpha: alphaDimensionalArray[0][0],
-        firstWordSecondAlpha: alphaDimensionalArray[0][1],
-        firstWordThirdAlpha: alphaDimensionalArray[0][2],
-        firstWordFourthAlpha: alphaDimensionalArray[0][3],
-        firstWordFifthAlpha: alphaDimensionalArray[0][4],
+                alphaData = {
+                    firstWordFirstAlpha: alphaDimensionalArray[0][0],
+                    firstWordSecondAlpha: alphaDimensionalArray[0][1],
+                    firstWordThirdAlpha: alphaDimensionalArray[0][2],
+                    firstWordFourthAlpha: alphaDimensionalArray[0][3],
+                    firstWordFifthAlpha: alphaDimensionalArray[0][4],
 
-        secondWordFirstAlpha: alphaDimensionalArray[1][0],
-        secondWordSecondAlpha: alphaDimensionalArray[1][1],
-        secondWordThirdAlpha: alphaDimensionalArray[1][2],
-        secondWordFourthAlpha: alphaDimensionalArray[1][3],
-        secondWordFifthAlpha: alphaDimensionalArray[1][4]
-    }
+                    secondWordFirstAlpha: alphaDimensionalArray[1][0],
+                    secondWordSecondAlpha: alphaDimensionalArray[1][1],
+                    secondWordThirdAlpha: alphaDimensionalArray[1][2],
+                    secondWordFourthAlpha: alphaDimensionalArray[1][3],
+                    secondWordFifthAlpha: alphaDimensionalArray[1][4]
+                }
             } else if(timesSubmitted === 3){
-    alphaData = {
-        firstWordFirstAlpha: alphaDimensionalArray[0][0],
-        firstWordSecondAlpha: alphaDimensionalArray[0][1],
-        firstWordThirdAlpha: alphaDimensionalArray[0][2],
-        firstWordFourthAlpha: alphaDimensionalArray[0][3],
-        firstWordFifthAlpha: alphaDimensionalArray[0][4],
+                alphaData = {
+                    firstWordFirstAlpha: alphaDimensionalArray[0][0],
+                    firstWordSecondAlpha: alphaDimensionalArray[0][1],
+                    firstWordThirdAlpha: alphaDimensionalArray[0][2],
+                    firstWordFourthAlpha: alphaDimensionalArray[0][3],
+                    firstWordFifthAlpha: alphaDimensionalArray[0][4],
 
-        secondWordFirstAlpha: alphaDimensionalArray[1][0],
-        secondWordSecondAlpha: alphaDimensionalArray[1][1],
-        secondWordThirdAlpha: alphaDimensionalArray[1][2],
-        secondWordFourthAlpha: alphaDimensionalArray[1][3],
-        secondWordFifthAlpha: alphaDimensionalArray[1][4],
+                    secondWordFirstAlpha: alphaDimensionalArray[1][0],
+                    secondWordSecondAlpha: alphaDimensionalArray[1][1],
+                    secondWordThirdAlpha: alphaDimensionalArray[1][2],
+                    secondWordFourthAlpha: alphaDimensionalArray[1][3],
+                    secondWordFifthAlpha: alphaDimensionalArray[1][4],
 
-        thirdWordFirstAlpha: alphaDimensionalArray[2][0],
-        thirdWordSecondAlpha: alphaDimensionalArray[2][1],
-        thirdWordThirdAlpha: alphaDimensionalArray[2][2],
-        thirdWordFourthAlpha: alphaDimensionalArray[2][3],
-        thirdWordFifthAlpha: alphaDimensionalArray[2][4]
-    }
+                    thirdWordFirstAlpha: alphaDimensionalArray[2][0],
+                    thirdWordSecondAlpha: alphaDimensionalArray[2][1],
+                    thirdWordThirdAlpha: alphaDimensionalArray[2][2],
+                    thirdWordFourthAlpha: alphaDimensionalArray[2][3],
+                    thirdWordFifthAlpha: alphaDimensionalArray[2][4]
+                }
             } else if(timesSubmitted === 4){
-    alphaData = {
-        firstWordFirstAlpha: alphaDimensionalArray[0][0],
-        firstWordSecondAlpha: alphaDimensionalArray[0][1],
-        firstWordThirdAlpha: alphaDimensionalArray[0][2],
-        firstWordFourthAlpha: alphaDimensionalArray[0][3],
-        firstWordFifthAlpha: alphaDimensionalArray[0][4],
+                alphaData = {
+                    firstWordFirstAlpha: alphaDimensionalArray[0][0],
+                    firstWordSecondAlpha: alphaDimensionalArray[0][1],
+                    firstWordThirdAlpha: alphaDimensionalArray[0][2],
+                    firstWordFourthAlpha: alphaDimensionalArray[0][3],
+                    firstWordFifthAlpha: alphaDimensionalArray[0][4],
 
-        secondWordFirstAlpha: alphaDimensionalArray[1][0],
-        secondWordSecondAlpha: alphaDimensionalArray[1][1],
-        secondWordThirdAlpha: alphaDimensionalArray[1][2],
-        secondWordFourthAlpha: alphaDimensionalArray[1][3],
-        secondWordFifthAlpha: alphaDimensionalArray[1][4],
+                    secondWordFirstAlpha: alphaDimensionalArray[1][0],
+                    secondWordSecondAlpha: alphaDimensionalArray[1][1],
+                    secondWordThirdAlpha: alphaDimensionalArray[1][2],
+                    secondWordFourthAlpha: alphaDimensionalArray[1][3],
+                    secondWordFifthAlpha: alphaDimensionalArray[1][4],
 
-        thirdWordFirstAlpha: alphaDimensionalArray[2][0],
-        thirdWordSecondAlpha: alphaDimensionalArray[2][1],
-        thirdWordThirdAlpha: alphaDimensionalArray[2][2],
-        thirdWordFourthAlpha: alphaDimensionalArray[2][3],
-        thirdWordFifthAlpha: alphaDimensionalArray[2][4],
+                    thirdWordFirstAlpha: alphaDimensionalArray[2][0],
+                    thirdWordSecondAlpha: alphaDimensionalArray[2][1],
+                    thirdWordThirdAlpha: alphaDimensionalArray[2][2],
+                    thirdWordFourthAlpha: alphaDimensionalArray[2][3],
+                    thirdWordFifthAlpha: alphaDimensionalArray[2][4],
 
-        fourthWordFirstAlpha: alphaDimensionalArray[3][0],
-        fourthWordSecondAlpha: alphaDimensionalArray[3][1],
-        fourthWordThirdAlpha: alphaDimensionalArray[3][2],
-        fourthWordFourthAlpha: alphaDimensionalArray[3][3],
-        fourthWordFifthAlpha: alphaDimensionalArray[3][4],
-    }
+                    fourthWordFirstAlpha: alphaDimensionalArray[3][0],
+                    fourthWordSecondAlpha: alphaDimensionalArray[3][1],
+                    fourthWordThirdAlpha: alphaDimensionalArray[3][2],
+                    fourthWordFourthAlpha: alphaDimensionalArray[3][3],
+                    fourthWordFifthAlpha: alphaDimensionalArray[3][4],
+                }
             } else if(timesSubmitted === 5){
-    alphaData = {
-        firstWordFirstAlpha: alphaDimensionalArray[0][0],
-        firstWordSecondAlpha: alphaDimensionalArray[0][1],
-        firstWordThirdAlpha: alphaDimensionalArray[0][2],
-        firstWordFourthAlpha: alphaDimensionalArray[0][3],
-        firstWordFifthAlpha: alphaDimensionalArray[0][4],
+                alphaData = {
+                    firstWordFirstAlpha: alphaDimensionalArray[0][0],
+                    firstWordSecondAlpha: alphaDimensionalArray[0][1],
+                    firstWordThirdAlpha: alphaDimensionalArray[0][2],
+                    firstWordFourthAlpha: alphaDimensionalArray[0][3],
+                    firstWordFifthAlpha: alphaDimensionalArray[0][4],
 
-        secondWordFirstAlpha: alphaDimensionalArray[1][0],
-        secondWordSecondAlpha: alphaDimensionalArray[1][1],
-        secondWordThirdAlpha: alphaDimensionalArray[1][2],
-        secondWordFourthAlpha: alphaDimensionalArray[1][3],
-        secondWordFifthAlpha: alphaDimensionalArray[1][4],
+                    secondWordFirstAlpha: alphaDimensionalArray[1][0],
+                    secondWordSecondAlpha: alphaDimensionalArray[1][1],
+                    secondWordThirdAlpha: alphaDimensionalArray[1][2],
+                    secondWordFourthAlpha: alphaDimensionalArray[1][3],
+                    secondWordFifthAlpha: alphaDimensionalArray[1][4],
 
-        thirdWordFirstAlpha: alphaDimensionalArray[2][0],
-        thirdWordSecondAlpha: alphaDimensionalArray[2][1],
-        thirdWordThirdAlpha: alphaDimensionalArray[2][2],
-        thirdWordFourthAlpha: alphaDimensionalArray[2][3],
-        thirdWordFifthAlpha: alphaDimensionalArray[2][4],
+                    thirdWordFirstAlpha: alphaDimensionalArray[2][0],
+                    thirdWordSecondAlpha: alphaDimensionalArray[2][1],
+                    thirdWordThirdAlpha: alphaDimensionalArray[2][2],
+                    thirdWordFourthAlpha: alphaDimensionalArray[2][3],
+                    thirdWordFifthAlpha: alphaDimensionalArray[2][4],
 
-        fourthWordFirstAlpha: alphaDimensionalArray[3][0],
-        fourthWordSecondAlpha: alphaDimensionalArray[3][1],
-        fourthWordThirdAlpha: alphaDimensionalArray[3][2],
-        fourthWordFourthAlpha: alphaDimensionalArray[3][3],
-        fourthWordFifthAlpha: alphaDimensionalArray[3][4],
+                    fourthWordFirstAlpha: alphaDimensionalArray[3][0],
+                    fourthWordSecondAlpha: alphaDimensionalArray[3][1],
+                    fourthWordThirdAlpha: alphaDimensionalArray[3][2],
+                    fourthWordFourthAlpha: alphaDimensionalArray[3][3],
+                    fourthWordFifthAlpha: alphaDimensionalArray[3][4],
 
-        fifthWordFirstAlpha: alphaDimensionalArray[4][0],
-        fifthWordSecondAlpha: alphaDimensionalArray[4][1],
-        fifthWordThirdAlpha: alphaDimensionalArray[4][2],
-        fifthWordFourthAlpha: alphaDimensionalArray[4][3],
-        fifthWordFifthAlpha: alphaDimensionalArray[4][4]
-    }
+                    fifthWordFirstAlpha: alphaDimensionalArray[4][0],
+                    fifthWordSecondAlpha: alphaDimensionalArray[4][1],
+                    fifthWordThirdAlpha: alphaDimensionalArray[4][2],
+                    fifthWordFourthAlpha: alphaDimensionalArray[4][3],
+                    fifthWordFifthAlpha: alphaDimensionalArray[4][4]
+                }
             } else if(timesSubmitted === 6){
-    alphaData = {
-        firstWordFirstAlpha: alphaDimensionalArray[0][0],
-        firstWordSecondAlpha: alphaDimensionalArray[0][1],
-        firstWordThirdAlpha: alphaDimensionalArray[0][2],
-        firstWordFourthAlpha: alphaDimensionalArray[0][3],
-        firstWordFifthAlpha: alphaDimensionalArray[0][4],
+                alphaData = {
+                    firstWordFirstAlpha: alphaDimensionalArray[0][0],
+                    firstWordSecondAlpha: alphaDimensionalArray[0][1],
+                    firstWordThirdAlpha: alphaDimensionalArray[0][2],
+                    firstWordFourthAlpha: alphaDimensionalArray[0][3],
+                    firstWordFifthAlpha: alphaDimensionalArray[0][4],
 
-        secondWordFirstAlpha: alphaDimensionalArray[1][0],
-        secondWordSecondAlpha: alphaDimensionalArray[1][1],
-        secondWordThirdAlpha: alphaDimensionalArray[1][2],
-        secondWordFourthAlpha: alphaDimensionalArray[1][3],
-        secondWordFifthAlpha: alphaDimensionalArray[1][4],
+                    secondWordFirstAlpha: alphaDimensionalArray[1][0],
+                    secondWordSecondAlpha: alphaDimensionalArray[1][1],
+                    secondWordThirdAlpha: alphaDimensionalArray[1][2],
+                    secondWordFourthAlpha: alphaDimensionalArray[1][3],
+                    secondWordFifthAlpha: alphaDimensionalArray[1][4],
 
-        thirdWordFirstAlpha: alphaDimensionalArray[2][0],
-        thirdWordSecondAlpha: alphaDimensionalArray[2][1],
-        thirdWordThirdAlpha: alphaDimensionalArray[2][2],
-        thirdWordFourthAlpha: alphaDimensionalArray[2][3],
-        thirdWordFifthAlpha: alphaDimensionalArray[2][4],
+                    thirdWordFirstAlpha: alphaDimensionalArray[2][0],
+                    thirdWordSecondAlpha: alphaDimensionalArray[2][1],
+                    thirdWordThirdAlpha: alphaDimensionalArray[2][2],
+                    thirdWordFourthAlpha: alphaDimensionalArray[2][3],
+                    thirdWordFifthAlpha: alphaDimensionalArray[2][4],
 
-        fourthWordFirstAlpha: alphaDimensionalArray[3][0],
-        fourthWordSecondAlpha: alphaDimensionalArray[3][1],
-        fourthWordThirdAlpha: alphaDimensionalArray[3][2],
-        fourthWordFourthAlpha: alphaDimensionalArray[3][3],
-        fourthWordFifthAlpha: alphaDimensionalArray[3][4],
+                    fourthWordFirstAlpha: alphaDimensionalArray[3][0],
+                    fourthWordSecondAlpha: alphaDimensionalArray[3][1],
+                    fourthWordThirdAlpha: alphaDimensionalArray[3][2],
+                    fourthWordFourthAlpha: alphaDimensionalArray[3][3],
+                    fourthWordFifthAlpha: alphaDimensionalArray[3][4],
 
-        fifthWordFirstAlpha: alphaDimensionalArray[4][0],
-        fifthWordSecondAlpha: alphaDimensionalArray[4][1],
-        fifthWordThirdAlpha: alphaDimensionalArray[4][2],
-        fifthWordFourthAlpha: alphaDimensionalArray[4][3],
-        fifthWordFifthAlpha: alphaDimensionalArray[4][4],
+                    fifthWordFirstAlpha: alphaDimensionalArray[4][0],
+                    fifthWordSecondAlpha: alphaDimensionalArray[4][1],
+                    fifthWordThirdAlpha: alphaDimensionalArray[4][2],
+                    fifthWordFourthAlpha: alphaDimensionalArray[4][3],
+                    fifthWordFifthAlpha: alphaDimensionalArray[4][4],
 
-        sixthWordFirstAlpha: alphaDimensionalArray[5][0],
-        sixthWordSecondAlpha: alphaDimensionalArray[5][1],
-        sixthWordThirdAlpha: alphaDimensionalArray[5][2],
-        sixthWordFourthAlpha: alphaDimensionalArray[5][3],
-        sixthWordFifthAlpha: alphaDimensionalArray[5][4]
-    }
+                    sixthWordFirstAlpha: alphaDimensionalArray[5][0],
+                    sixthWordSecondAlpha: alphaDimensionalArray[5][1],
+                    sixthWordThirdAlpha: alphaDimensionalArray[5][2],
+                    sixthWordFourthAlpha: alphaDimensionalArray[5][3],
+                    sixthWordFifthAlpha: alphaDimensionalArray[5][4]
+                }
 }        
 
             let firstLetterColor = "#808080";
@@ -210,30 +210,96 @@ app.get("/", async (req, res) => {
             let fourthLetterColor = "#808080";
             let fifthLetterColor = "#808080";
 
+            // checking if alphabet is correct/misplaced/wrong
             if(wordA[0] === userGuessA[0]){
                 firstLetterColor = "#20B41D";
             } else{
-                firstLetterColor = "#525252"
+
+                let yellowFound = false;
+
+                for(let i = 0; i < 5; i++){
+                    if(!yellowFound){
+                        if(userGuessA[0] === wordA[i]){
+                            firstLetterColor = "#ffb800";
+                            yellowFound = true;
+                        } else{
+                            firstLetterColor = "#525252";
+                        }
+                    }
+                    
+                }
             }
             if(wordA[1] === userGuessA[1]){
                 secondLetterColor = "#20B41D";
             } else{
-                secondLetterColor = "#525252"
+
+                let yellowFound = false;
+
+                for(let i = 0; i < 5; i++){
+                    if(!yellowFound){
+                        if(userGuessA[1] === wordA[i]){
+                            secondLetterColor = "#ffb800";
+                            yellowFound = true;
+                        } else{
+                            secondLetterColor = "#525252";
+                        }
+                    }
+                    
+                }
             }
             if(wordA[2] === userGuessA[2]){
                 thirdLetterColor = "#20B41D";
             } else{
-                thirdLetterColor = "#525252"
+
+                let yellowFound = false;
+
+                for(let i = 0; i < 5; i++){
+                    if(!yellowFound){
+                        if(userGuessA[2] === wordA[i]){
+                            thirdLetterColor = "#ffb800";
+                            yellowFound = true;
+                        } else{
+                            thirdLetterColor = "#525252";
+                        }
+                    }
+                    
+                }
             }
             if(wordA[3] === userGuessA[3]){
                 fourthLetterColor = "#20B41D";
             } else{
-                fourthLetterColor = "#525252"
+
+                let yellowFound = false;
+
+                for(let i = 0; i < 5; i++){
+                    if(!yellowFound){
+                        if(userGuessA[3] === wordA[i]){
+                            fourthLetterColor = "#ffb800";
+                            yellowFound = true;
+                        } else{
+                            fourthLetterColor = "#525252";
+                        }
+                    }
+                    
+                }
             }
             if(wordA[4] === userGuessA[4]){
                 fifthLetterColor = "#20B41D";
             } else{
-                fifthLetterColor = "#525252"
+
+                let yellowFound = false;
+
+                for(let i = 0; i < 5; i++){
+                    if(!yellowFound){
+                        if(userGuessA[4] === wordA[i]){
+                            fifthLetterColor = "#ffb800";
+                            yellowFound = true;
+                        } else{
+                            fifthLetterColor = "#525252";
+                        }
+                    }
+                    
+                }
             }
 
             let rowColorArray = [firstLetterColor, secondLetterColor, thirdLetterColor, fourthLetterColor, fifthLetterColor];
