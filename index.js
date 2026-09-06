@@ -15,7 +15,6 @@ import { fileURLToPath } from "url";
 import path from "path";
 import bodyParser from "body-parser";
 import axios from "axios";
-import { time } from "console";
 
 
 const port = 3000;
@@ -26,9 +25,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get("/", async (req, res) => {
 
+    let word = "";
     // getting random word
     let gettingWord = await axios.get("https://random-word-api.herokuapp.com/word?length=5&diff=1");
-    let word = gettingWord.data;
+    word = gettingWord.data;
     word = word[0];
     word = word.toUpperCase();
     console.log(word);
@@ -47,10 +47,15 @@ app.get("/", async (req, res) => {
 
     let timesSubmitted = 0;
 
+    let wordA = [];
+    let userGuessA = [];
+    
+    let userGuess;
+
     res.render("index.ejs");
 
-    app.post("/submit", async (req, res) => {
-        let userGuess = req.body["userGuess"];
+    app.post("/submit", (req, res) => {
+        userGuess = req.body["userGuess"];
         userGuess = userGuess.toUpperCase();
 
         console.log(`userGuess: ${userGuess}`);
@@ -58,8 +63,8 @@ app.get("/", async (req, res) => {
         if(userGuess.length == 5){
             timesSubmitted++;
             
-            let wordA = [word[0], word[1], word[2], word[3], word[4]];
-            let userGuessA = [userGuess[0], userGuess[1], userGuess[2], userGuess[3],userGuess[4]];
+            wordA = [word[0], word[1], word[2], word[3], word[4]];
+            userGuessA = [userGuess[0], userGuess[1], userGuess[2], userGuess[3],userGuess[4]];
 
             alphaDimensionalArray.push(userGuessA);
 
@@ -455,6 +460,7 @@ app.get("/", async (req, res) => {
                 console.log(`Game won - took ${6-guessesLeft} guesses`);
                 finalStatement = `Game Won! in ${6-guessesLeft} Guesses`;
 
+
             } else{
                 if(guessesLeft > 1){
                     guessesLeft--;
@@ -472,7 +478,13 @@ app.get("/", async (req, res) => {
             res.render("index.ejs", {guessesLeft: guessesLeft, colorData, alphaData});
         }
         else{
-            res.render("index.ejs", {finalStatement: finalStatement, guessesLeft: guessesLeft, colorData, alphaData});
+            //res.render("index.ejs", {finalStatement: finalStatement, guessesLeft: guessesLeft, colorData, alphaData});
+            if(gameWon){
+                res.render("win.ejs", {finalStatement: finalStatement, guessesLeft: guessesLeft, word});
+            }
+            else{
+                res.render("fail.ejs", {finalStatement: finalStatement, guessesLeft: guessesLeft, word: word, userGuess: userGuess});
+            }
         }
 
     
@@ -494,6 +506,14 @@ app.get("/", async (req, res) => {
     
 
 });
+
+app.get("/playAgain", (req, res) => {
+    
+    
+
+    res.render("index.ejs");
+
+    });
 
 
 
