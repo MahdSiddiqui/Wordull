@@ -393,10 +393,6 @@ app.get("/", async (req, res) => {
 			}
 
             
-
-    console.log(greenLettersArray);
-    console.log(yellowLettersArray);
-    console.log(blackLettersArray);
     
 
             let rowColorArray = [firstLetterColor, secondLetterColor, thirdLetterColor, fourthLetterColor, fifthLetterColor];

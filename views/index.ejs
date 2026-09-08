@@ -60,12 +60,10 @@
     </div>
     <div class="infoContainer">
         <div class="guessesLeftContainer">
-            <p class="guessesLeft">Guesses Left: <% if(locals.guessesLeft){ %> <%=guessesLeft%> <% } else{ %> 6 <% } %></p>
         </div>
         <div class="formContainer">
             <form action="/submit" method="POST"> 
                 <input class="guessI" type="text" name="userGuess" placeholder="guess" autofocus> <br>
-                <input class="btnI" class="submit" type="submit" value="OK">
             </form>
         </div>
         
