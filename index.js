@@ -46,6 +46,10 @@ app.get("/", async (req, res) => {
     let alphaDimensionalArray = [];
     let alphaData = {};
 
+    let greenLettersArray = [];
+    let yellowLettersArray = [];
+    let blackLettersArray = [];
+
     let timesSubmitted = 0;
 
     let wordA = [];
@@ -71,6 +75,9 @@ app.get("/", async (req, res) => {
         wordA = [];
         userGuessA = [];
         userGuess = "";
+        greenLettersArray = [];
+        yellowLettersArray = [];
+        blackLettersArray = [];
 
     }
 
@@ -240,94 +247,157 @@ app.get("/", async (req, res) => {
             // checking if alphabet is correct/misplaced/wrong
             if(wordA[0] === userGuessA[0]){
                 firstLetterColor = "#20B41D";
+                greenLettersArray.push(userGuessA[0]);
             } else{
 
                 let yellowFound = false;
+                let blackFound = false;
 
-                for(let i = 0; i < 5; i++){
-                    if(!yellowFound){
-                        if(userGuessA[0] === wordA[i]){
-                            firstLetterColor = "#ffb800";
-                            yellowFound = true;
-                        } else{
-                            firstLetterColor = "#525252";
+                if(!yellowFound){
+                    for(let i = 0; i < 5; i++){
+                        if(!yellowFound){
+                            if(userGuessA[0] === wordA[i]){
+                                yellowFound = true;
+                                blackFound = true;
+                                firstLetterColor = "#ffb800";
+                                yellowLettersArray.push(userGuessA[0]);
+                            }
                         }
                     }
-                    
                 }
-            }
-            if(wordA[1] === userGuessA[1]){
-                secondLetterColor = "#20B41D";
-            } else{
-
-                let yellowFound = false;
-
-                for(let i = 0; i < 5; i++){
-                    if(!yellowFound){
-                        if(userGuessA[1] === wordA[i]){
-                            secondLetterColor = "#ffb800";
-                            yellowFound = true;
-                        } else{
-                            secondLetterColor = "#525252";
-                        }
+                if(!blackFound){
+                    if(userGuessA[0] != wordA[0]){
+                        blackFound = true;
+                        firstLetterColor = "#424242";
+                        blackLettersArray.push(userGuessA[0]);
                     }
-                    
                 }
+
+                
             }
-            if(wordA[2] === userGuessA[2]){
-                thirdLetterColor = "#20B41D";
-            } else{
 
-                let yellowFound = false;
+			if(wordA[1] === userGuessA[1]){
+				secondLetterColor = "#20B41D";
+				greenLettersArray.push(userGuessA[1]);
+			} else{
 
-                for(let i = 0; i < 5; i++){
-                    if(!yellowFound){
-                        if(userGuessA[2] === wordA[i]){
-                            thirdLetterColor = "#ffb800";
-                            yellowFound = true;
-                        } else{
-                            thirdLetterColor = "#525252";
-                        }
-                    }
-                    
-                }
-            }
-            if(wordA[3] === userGuessA[3]){
-                fourthLetterColor = "#20B41D";
-            } else{
+				let yellowFound = false;
+				let blackFound = false;
 
-                let yellowFound = false;
+				if(!yellowFound){
+					for(let i = 0; i < 5; i++){
+						if(!yellowFound){
+							if(userGuessA[1] === wordA[i]){
+								yellowFound = true;
+								blackFound = true;
+								secondLetterColor = "#ffb800";
+								yellowLettersArray.push(userGuessA[1]);
+							}
+						}
+					}
+				}
+				if(!blackFound){
+					if(userGuessA[1] != wordA[1]){
+						blackFound = true;
+						secondLetterColor = "#424242";
+						blackLettersArray.push(userGuessA[1]);
+					}
+				}
+			}
 
-                for(let i = 0; i < 5; i++){
-                    if(!yellowFound){
-                        if(userGuessA[3] === wordA[i]){
-                            fourthLetterColor = "#ffb800";
-                            yellowFound = true;
-                        } else{
-                            fourthLetterColor = "#525252";
-                        }
-                    }
-                    
-                }
-            }
-            if(wordA[4] === userGuessA[4]){
-                fifthLetterColor = "#20B41D";
-            } else{
+			if(wordA[2] === userGuessA[2]){
+				thirdLetterColor = "#20B41D";
+				greenLettersArray.push(userGuessA[2]);
+			} else{
 
-                let yellowFound = false;
+				let yellowFound = false;
+				let blackFound = false;
 
-                for(let i = 0; i < 5; i++){
-                    if(!yellowFound){
-                        if(userGuessA[4] === wordA[i]){
-                            fifthLetterColor = "#ffb800";
-                            yellowFound = true;
-                        } else{
-                            fifthLetterColor = "#525252";
-                        }
-                    }
-                    
-                }
-            }
+				if(!yellowFound){
+					for(let i = 0; i < 5; i++){
+						if(!yellowFound){
+							if(userGuessA[2] === wordA[i]){
+								yellowFound = true;
+								blackFound = true;
+								thirdLetterColor = "#ffb800";
+								yellowLettersArray.push(userGuessA[2]);
+							}
+						}
+					}
+				}
+				if(!blackFound){
+					if(userGuessA[2] != wordA[2]){
+						blackFound = true;
+						thirdLetterColor = "#424242";
+						blackLettersArray.push(userGuessA[2]);
+					}
+				}
+			}
+
+			if(wordA[3] === userGuessA[3]){
+				fourthLetterColor = "#20B41D";
+				greenLettersArray.push(userGuessA[3]);
+			} else{
+
+				let yellowFound = false;
+				let blackFound = false;
+
+				if(!yellowFound){
+					for(let i = 0; i < 5; i++){
+						if(!yellowFound){
+							if(userGuessA[3] === wordA[i]){
+								yellowFound = true;
+								blackFound = true;
+								fourthLetterColor = "#ffb800";
+								yellowLettersArray.push(userGuessA[3]);
+							}
+						}
+					}
+				}
+				if(!blackFound){
+					if(userGuessA[3] != wordA[3]){
+						blackFound = true;
+						fourthLetterColor = "#424242";
+						blackLettersArray.push(userGuessA[3]);
+					}
+				}
+			}
+
+			if(wordA[4] === userGuessA[4]){
+				fifthLetterColor = "#20B41D";
+				greenLettersArray.push(userGuessA[4]);
+			} else{
+
+				let yellowFound = false;
+				let blackFound = false;
+
+				if(!yellowFound){
+					for(let i = 0; i < 5; i++){
+						if(!yellowFound){
+							if(userGuessA[4] === wordA[i]){
+								yellowFound = true;
+								blackFound = true;
+								fifthLetterColor = "#ffb800";
+								yellowLettersArray.push(userGuessA[4]);
+							}
+						}
+					}
+				}
+				if(!blackFound){
+					if(userGuessA[4] != wordA[4]){
+						blackFound = true;
+						fifthLetterColor = "#424242";
+						blackLettersArray.push(userGuessA[4]);
+					}
+				}
+			}
+
+            
+
+    console.log(greenLettersArray);
+    console.log(yellowLettersArray);
+    console.log(blackLettersArray);
+    
 
             let rowColorArray = [firstLetterColor, secondLetterColor, thirdLetterColor, fourthLetterColor, fifthLetterColor];
 
