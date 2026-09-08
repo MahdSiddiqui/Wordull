@@ -6,6 +6,14 @@ body{
 .mainContainer{
   display: flex;
   justify-content: center;
+  margin-top: 35px;
+}
+.mainTitle{
+  text-align: center;
+  font-size: 47px;
+  margin-top: 40px;
+  font-weight: 900;
+  color:antiquewhite;
 }
 .mainContainerOfGrid{
     display: flex;
@@ -13,11 +21,12 @@ body{
 }
 .semiMainContainer{
   background-color: #121213;
-  height: 900px;
-  width: 700px;
+  height: 950px;
+  width: 600px;
+  border-radius: 20px;
 }
 .grid-container {
-  margin-top: 70px;
+  margin-top: 0px;
   background-color: #121213;
   display: grid;
   grid-template-columns: repeat(5, 1fr); /* 5 columns */
@@ -28,6 +37,7 @@ body{
 
 .grid-item {
   background-color: #808080;
+  border-radius: 3px;
   aspect-ratio: 1 / 1;                  /* Forces each item to be a square */
   display: flex;
   align-items: center;
@@ -81,6 +91,8 @@ input:focus {
 }
 .guessesLeft{
   color: antiquewhite;
+  font-weight: 900;
+  font-size: 20px;
 }
 .grid-container>div{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
