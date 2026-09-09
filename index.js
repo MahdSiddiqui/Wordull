@@ -50,12 +50,41 @@ app.get("/", async (req, res) => {
     let yellowLettersArray = [];
     let blackLettersArray = [];
 
+    let alphaToClassArray = [];
+
     let timesSubmitted = 0;
 
     let wordA = [];
     let userGuessA = [];
     
     let userGuess;
+
+    let a = "normal";
+	let b = "normal";
+	let c = "normal";
+	let d = "normal";
+	let e = "normal";
+	let f = "normal";
+	let g = "normal";
+	let h = "normal";
+	let i = "normal";
+	let j = "normal";
+	let k = "normal";
+	let l = "normal";
+	let m = "normal";
+	let n = "normal";
+	let o = "normal";
+	let p = "normal";
+	let q = "normal";
+	let r = "normal";
+	let s = "normal";
+	let t = "normal";
+	let u = "normal";
+	let v = "normal";
+	let w = "normal";
+	let x = "normal";
+	let y = "normal";
+	let z = "normal";
 
     async function resetAllData(){
         word = "";
@@ -78,7 +107,33 @@ app.get("/", async (req, res) => {
         greenLettersArray = [];
         yellowLettersArray = [];
         blackLettersArray = [];
-
+        alphaToClassArray = [];
+        a = "normal";
+		b = "normal";
+		c = "normal";
+		d = "normal";
+		e = "normal";
+		f = "normal";
+		g = "normal";
+		h = "normal";
+		i = "normal";
+		j = "normal";
+		k = "normal";
+		l = "normal";
+		m = "normal";
+		n = "normal";
+		o = "normal";
+		p = "normal";
+		q = "normal";
+		r = "normal";
+		s = "normal";
+		t = "normal";
+		u = "normal";
+		v = "normal";
+		w = "normal";
+		x = "normal";
+		y = "normal";
+		z = "normal";
     }
 
     res.render("index.ejs");
@@ -393,7 +448,281 @@ app.get("/", async (req, res) => {
 			}
 
             
-    
+
+            function checkGreenLetters(){
+				if(greenLettersArray.includes("A")){
+				    a = "green";
+				}
+
+				if(greenLettersArray.includes("B")){
+				    b = "green";
+				}
+
+				if(greenLettersArray.includes("C")){
+				    c = "green";
+				}
+
+				if(greenLettersArray.includes("D")){
+				    d = "green";
+				}
+
+				if(greenLettersArray.includes("E")){
+				    e = "green";
+				}
+
+				if(greenLettersArray.includes("F")){
+				    f = "green";
+				}
+
+				if(greenLettersArray.includes("G")){
+				    g = "green";
+				}
+
+				if(greenLettersArray.includes("H")){
+				    h = "green";
+				}
+
+				if(greenLettersArray.includes("I")){
+				    i = "green";
+				}
+
+				if(greenLettersArray.includes("J")){
+				    j = "green";
+				}
+
+				if(greenLettersArray.includes("K")){
+				    k = "green";
+				}
+
+				if(greenLettersArray.includes("L")){
+				    l = "green";
+				}
+
+				if(greenLettersArray.includes("M")){
+				    m = "green";
+				}
+
+				if(greenLettersArray.includes("N")){
+				    n = "green";
+				}
+
+				if(greenLettersArray.includes("O")){
+				    o = "green";
+				}
+
+				if(greenLettersArray.includes("P")){
+				    p = "green";
+				}
+
+				if(greenLettersArray.includes("Q")){
+				    q = "green";
+				}
+
+				if(greenLettersArray.includes("R")){
+				    r = "green";
+				}
+
+				if(greenLettersArray.includes("S")){
+				    s = "green";
+				}
+
+				if(greenLettersArray.includes("T")){
+				    t = "green";
+				}
+
+				if(greenLettersArray.includes("U")){
+				    u = "green";
+				}
+
+				if(greenLettersArray.includes("V")){
+				    v = "green";
+				}
+
+				if(greenLettersArray.includes("W")){
+				    w = "green";
+				}
+
+				if(greenLettersArray.includes("X")){
+				    x = "green";
+				}
+
+				if(greenLettersArray.includes("Y")){
+				    y = "green";
+				}
+
+				if(greenLettersArray.includes("Z")){
+				    z = "green";
+				}
+            }
+            function checkBlackLetters(){
+				if(blackLettersArray.includes("A")){
+				    a = "black";
+				}
+				if(blackLettersArray.includes("B")){
+				    b = "black";
+				}
+				if(blackLettersArray.includes("C")){
+				    c = "black";
+				}
+				if(blackLettersArray.includes("D")){
+				    d = "black";
+				}
+				if(blackLettersArray.includes("E")){
+				    e = "black";
+				}
+				if(blackLettersArray.includes("F")){
+				    f = "black";
+				}
+				if(blackLettersArray.includes("G")){
+				    g = "black";
+				}
+				if(blackLettersArray.includes("H")){
+				    h = "black";
+				}
+				if(blackLettersArray.includes("I")){
+				    i = "black";
+				}
+				if(blackLettersArray.includes("J")){
+				    j = "black";
+				}
+				if(blackLettersArray.includes("K")){
+				    k = "black";
+				}
+				if(blackLettersArray.includes("L")){
+				    l = "black";
+				}
+				if(blackLettersArray.includes("M")){
+				    m = "black";
+				}
+				if(blackLettersArray.includes("N")){
+				    n = "black";
+				}
+				if(blackLettersArray.includes("O")){
+				    o = "black";
+				}
+				if(blackLettersArray.includes("P")){
+				    p = "black";
+				}
+				if(blackLettersArray.includes("Q")){
+				    q = "black";
+				}
+				if(blackLettersArray.includes("R")){
+				    r = "black";
+				}
+				if(blackLettersArray.includes("S")){
+				    s = "black";
+				}
+				if(blackLettersArray.includes("T")){
+				    t = "black";
+				}
+				if(blackLettersArray.includes("U")){
+				    u = "black";
+				}
+				if(blackLettersArray.includes("V")){
+				    v = "black";
+				}
+				if(blackLettersArray.includes("W")){
+				    w = "black";
+				}
+				if(blackLettersArray.includes("X")){
+				    x = "black";
+				}
+				if(blackLettersArray.includes("Y")){
+				    y = "black";
+				}
+				if(blackLettersArray.includes("Z")){
+				    z = "black";
+				}
+            }
+            function checkYellowLetters(){
+				if(yellowLettersArray.includes("A")){
+				    a = "yellow";
+				}
+				if(yellowLettersArray.includes("B")){
+				    b = "yellow";
+				}
+				if(yellowLettersArray.includes("C")){
+				    c = "yellow";
+				}
+				if(yellowLettersArray.includes("D")){
+				    d = "yellow";
+				}
+				if(yellowLettersArray.includes("E")){
+				    e = "yellow";
+				}
+				if(yellowLettersArray.includes("F")){
+				    f = "yellow";
+				}
+				if(yellowLettersArray.includes("G")){
+				    g = "yellow";
+				}
+				if(yellowLettersArray.includes("H")){
+				    h = "yellow";
+				}
+				if(yellowLettersArray.includes("I")){
+				    i = "yellow";
+				}
+				if(yellowLettersArray.includes("J")){
+				    j = "yellow";
+				}
+				if(yellowLettersArray.includes("K")){
+				    k = "yellow";
+				}
+				if(yellowLettersArray.includes("L")){
+				    l = "yellow";
+				}
+				if(yellowLettersArray.includes("M")){
+				    m = "yellow";
+				}
+				if(yellowLettersArray.includes("N")){
+				    n = "yellow";
+				}
+				if(yellowLettersArray.includes("O")){
+				    o = "yellow";
+				}
+				if(yellowLettersArray.includes("P")){
+				    p = "yellow";
+				}
+				if(yellowLettersArray.includes("Q")){
+				    q = "yellow";
+				}
+				if(yellowLettersArray.includes("R")){
+				    r = "yellow";
+				}
+				if(yellowLettersArray.includes("S")){
+				    s = "yellow";
+				}
+				if(yellowLettersArray.includes("T")){
+				    t = "yellow";
+				}
+				if(yellowLettersArray.includes("U")){
+				    u = "yellow";
+				}
+				if(yellowLettersArray.includes("V")){
+				    v = "yellow";
+				}
+				if(yellowLettersArray.includes("W")){
+				    w = "yellow";
+				}
+				if(yellowLettersArray.includes("X")){
+				    x = "yellow";
+				}
+				if(yellowLettersArray.includes("Y")){
+				    y = "yellow";
+				}
+				if(yellowLettersArray.includes("Z")){
+				    z = "yellow";
+				}
+            }
+            
+            checkGreenLetters();
+            checkYellowLetters();
+            checkBlackLetters();
+
+            alphaToClassArray.push(a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z);
+            console.log(alphaToClassArray);
+
+            console.log(alphaToClassArray[0])
 
             let rowColorArray = [firstLetterColor, secondLetterColor, thirdLetterColor, fourthLetterColor, fifthLetterColor];
 
@@ -566,7 +895,7 @@ app.get("/", async (req, res) => {
         
 
         if(!gameOver){
-            res.render("index.ejs", {guessesLeft: guessesLeft, colorData, alphaData});
+            res.render("index.ejs", {guessesLeft: guessesLeft, colorData, alphaData, alphaToClassArray});
         }
         else{
             //res.render("index.ejs", {finalStatement: finalStatement, guessesLeft: guessesLeft, colorData, alphaData});

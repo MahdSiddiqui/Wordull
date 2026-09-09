@@ -86,9 +86,6 @@ input:focus {
     transition-duration: 0.2s;
     font-size: 27px;
 }
-.guessesLeftContainer{
-
-}
 .guessesLeft{
   color: antiquewhite;
   font-weight: 900;
@@ -139,13 +136,13 @@ input:focus {
   width: 500px;
 }
 .letter{
-  background-color: #808080;
+  background-color: gray;
   border-radius: 3px;
   aspect-ratio: 1 / 1;                  /* Forces each item to be a square */
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: antiquewhite;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 900;
   font-size: 20px;
@@ -156,7 +153,7 @@ input:focus {
   background-color: #808080;
 }
 .black{
-  color: white;
+  color: antiquewhite;
   background-color: #38383a;
 }
 .green{
@@ -164,6 +161,6 @@ input:focus {
   background-color: #20B41D;
 }
 .yellow{
-  color: white;
+  color: antiquewhite;
   background-color: #ffb800;
 }
