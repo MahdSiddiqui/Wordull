@@ -719,10 +719,8 @@ app.get("/", async (req, res) => {
             checkYellowLetters();
             checkBlackLetters();
 
+            alphaToClassArray = [];
             alphaToClassArray.push(a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z);
-            console.log(alphaToClassArray);
-
-            console.log(alphaToClassArray[0])
 
             let rowColorArray = [firstLetterColor, secondLetterColor, thirdLetterColor, fourthLetterColor, fifthLetterColor];
 
