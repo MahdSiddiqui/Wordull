@@ -1,70 +1,78 @@
-
 body{
     font-family: arial;
     background-color: #38383a;
 }
+
 .mainContainer{
-  display: flex;
-  justify-content: center;
-  margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
 }
+
 .mainTitle{
-  text-align: center;
-  font-size: 35px;
-  margin-top: 30px;
-  font-weight: 900;
-  color:antiquewhite;
+    text-align: center;
+    font-size: 35px;
+    margin-top: 30px;
+    font-weight: 900;
+    color: antiquewhite;
 }
+
 .mainContainerOfGrid{
     display: flex;
     justify-content: center;
 }
+
 .semiMainContainer{
-  background-color: #121213;
-  height: 600px;
-  width: 450px;
-  border-radius: 20px;
+    background-color: #121213;
+    height: 600px;
+    width: 450px;
+    border-radius: 20px;
 }
+
 .grid-container {
-  margin-top: 0px;
-  background-color: #121213;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr); /* 5 columns */
-  grid-template-rows: repeat(6, 1fr);    /* 6 rows */
-  gap: 3px;                            /* Space between squares */
-  width: 300px;                     /* Optional max width */
+    margin-top: 0px;
+    background-color: #121213;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 3px;
+    width: 300px;
 }
 
 .grid-item {
-  background-color: #808080;
-  border-radius: 3px;
-  aspect-ratio: 1 / 1;                  /* Forces each item to be a square */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-weight: bold;
+    background-color: #808080;
+    border-radius: 3px;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
 }
+
 .infoContainer{
-  text-align: center;
+    text-align: center;
 }
+
 .guessI{
-  text-align: center;
-  border: 2px solid antiquewhite;
-  background-color: #121213;
-  width: 330px;
-  height: 50px;
-  color: antiquewhite;
-  font-size: 20px;
-  border-radius: 10px;
-  text-transform: uppercase;
-  font-weight: 900;
-  margin-top: 23px;
+    text-align: center;
+    border: 2px solid antiquewhite;
+    background-color: #121213;
+    width: 330px;
+    height: 50px;
+    color: antiquewhite;
+    font-size: 20px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-weight: 900;
+    margin-top: 23px;
 }
+
 input:focus {
     outline: none;
     box-shadow: none;
 }
+
 .btnI{
     border: 3px solid antiquewhite;
     background-color: #121213;
@@ -75,9 +83,9 @@ input:focus {
     margin-top: 30px;
     font-size: 17px;
     transition-duration: 0.2s;
-  font-weight: 900;
+    font-weight: 900;
+}
 
-}   
 .btnI:hover{
     background-color: antiquewhite;
     width: 260px;
@@ -86,81 +94,102 @@ input:focus {
     transition-duration: 0.2s;
     font-size: 27px;
 }
+
 .guessesLeft{
-  color: antiquewhite;
-  font-weight: 900;
-  font-size: 20px;
+    color: antiquewhite;
+    font-weight: 900;
+    font-size: 20px;
 }
+
 .grid-container>div{
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 30px;
-  font-weight: 900;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+    font-weight: 900;
 }
 
 .mainMainLettersContainer{
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
+
 .mainSemiLettersContainer{
-  background-color: #121213;
-  margin-top: 50px;
-  height: 200px;
-  align-content: center;
-  text-align: center;
-  display: block;
-  padding: 25px 45px;
-  border-radius: 20px;
+    background-color: #121213;
+    margin-top: 50px;
+    height: 200px;
+    align-content: center;
+    text-align: center;
+    display: block;
+    padding: 25px 45px;
+    border-radius: 20px;
 }
+
 .mainLettersContainer{
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  width: 480px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 480px;
 }
+
 .lettersContainer{
-  margin-top: 0px;
-  background-color: #121213;
-  display: grid;
-  grid-template-columns: repeat(8, 1fr); /* 5 columns */
-  grid-template-rows: repeat(2, 1fr);    /* 6 rows */
-  gap: 3px;                            /* Space between squares */
-  width: 500px;    
+    margin-top: 0px;
+    background-color: #121213;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 3px;
+    width: 500px;
 }
+
 .secondLettersContainer{
-  margin-top: 3px;
-  background-color: #121213;
-  display: grid;
-  grid-template-columns: repeat(10, 1fr); /* 5 columns */
-  grid-template-rows: repeat(1, 1fr);    /* 6 rows */
-  gap: 3px;                            /* Space between squares */
-  width: 500px;
+    margin-top: 3px;
+    background-color: #121213;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 3px;
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
 }
+
+.thirdLettersContainer{
+    margin-top: 3px;
+    background-color: #121213;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 3px;
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .letter{
-  background-color: gray;
-  border-radius: 3px;
-  aspect-ratio: 1 / 1;                  /* Forces each item to be a square */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: antiquewhite;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: 900;
-  font-size: 20px;
+    background-color: gray;
+    border-radius: 3px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: antiquewhite;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 900;
+    font-size: 20px;
 }
 
 .normal{
-  color: antiquewhite;
-  background-color: #808080;
+    color: antiquewhite;
+    background-color: #808080;
 }
+
 .black{
-  color: antiquewhite;
-  background-color: #38383a;
+    color: antiquewhite;
+    background-color: #38383a;
 }
+
 .green{
-  color: antiquewhite;
-  background-color: #20B41D;
+    color: antiquewhite;
+    background-color: #20B41D;
 }
+
 .yellow{
-  color: #38383a;
-  background-color: #ffb800;
+    color: white;
+    background-color: #ffb800;
 }
