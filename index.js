@@ -635,84 +635,109 @@ app.get("/", async (req, res) => {
 				}
             }
             function checkYellowLetters(){
-				if(yellowLettersArray.includes("A")){
-				    a = "yellow";
-				}
-				if(yellowLettersArray.includes("B")){
-				    b = "yellow";
-				}
-				if(yellowLettersArray.includes("C")){
-				    c = "yellow";
-				}
-				if(yellowLettersArray.includes("D")){
-				    d = "yellow";
-				}
-				if(yellowLettersArray.includes("E")){
-				    e = "yellow";
-				}
-				if(yellowLettersArray.includes("F")){
-				    f = "yellow";
-				}
-				if(yellowLettersArray.includes("G")){
-				    g = "yellow";
-				}
-				if(yellowLettersArray.includes("H")){
-				    h = "yellow";
-				}
-				if(yellowLettersArray.includes("I")){
-				    i = "yellow";
-				}
-				if(yellowLettersArray.includes("J")){
-				    j = "yellow";
-				}
-				if(yellowLettersArray.includes("K")){
-				    k = "yellow";
-				}
-				if(yellowLettersArray.includes("L")){
-				    l = "yellow";
-				}
-				if(yellowLettersArray.includes("M")){
-				    m = "yellow";
-				}
-				if(yellowLettersArray.includes("N")){
-				    n = "yellow";
-				}
-				if(yellowLettersArray.includes("O")){
-				    o = "yellow";
-				}
-				if(yellowLettersArray.includes("P")){
-				    p = "yellow";
-				}
-				if(yellowLettersArray.includes("Q")){
-				    q = "yellow";
-				}
-				if(yellowLettersArray.includes("R")){
-				    r = "yellow";
-				}
-				if(yellowLettersArray.includes("S")){
-				    s = "yellow";
-				}
-				if(yellowLettersArray.includes("T")){
-				    t = "yellow";
-				}
-				if(yellowLettersArray.includes("U")){
-				    u = "yellow";
-				}
-				if(yellowLettersArray.includes("V")){
-				    v = "yellow";
-				}
-				if(yellowLettersArray.includes("W")){
-				    w = "yellow";
-				}
-				if(yellowLettersArray.includes("X")){
-				    x = "yellow";
-				}
-				if(yellowLettersArray.includes("Y")){
-				    y = "yellow";
-				}
-				if(yellowLettersArray.includes("Z")){
-				    z = "yellow";
-				}
+				    if(yellowLettersArray.includes("A") && !greenLettersArray.includes("A")){
+                        a = "yellow";
+                    }
+                
+                    if(yellowLettersArray.includes("B") && !greenLettersArray.includes("B")){
+                        b = "yellow";
+                    }
+                
+                    if(yellowLettersArray.includes("C") && !greenLettersArray.includes("C")){
+                        c = "yellow";
+                    }
+                
+                    if(yellowLettersArray.includes("D") && !greenLettersArray.includes("D")){
+                        d = "yellow";
+                    }
+                
+                    if(yellowLettersArray.includes("E") && !greenLettersArray.includes("E")){
+                        e = "yellow";
+                    }
+                
+                    if(yellowLettersArray.includes("F") && !greenLettersArray.includes("F")){
+                        f = "yellow";
+                    }
+                
+                    if(yellowLettersArray.includes("G") && !greenLettersArray.includes("G")){
+                        g = "yellow";
+                    }
+                
+                    if(yellowLettersArray.includes("H") && !greenLettersArray.includes("H")){
+                        h = "yellow";
+                    }
+                
+                    if(yellowLettersArray.includes("I") && !greenLettersArray.includes("I")){
+                        i = "yellow";
+                    }
+                
+                    if(yellowLettersArray.includes("J") && !greenLettersArray.includes("J")){
+                        j = "yellow";
+                    }
+                
+                    if(yellowLettersArray.includes("K") && !greenLettersArray.includes("K")){
+                        k = "yellow";
+                    }
+                
+                    if(yellowLettersArray.includes("L") && !greenLettersArray.includes("L")){
+                        l = "yellow";
+                    }
+                
+                    if(yellowLettersArray.includes("M") && !greenLettersArray.includes("M")){
+                        m = "yellow";
+                    }
+                
+                    if(yellowLettersArray.includes("N") && !greenLettersArray.includes("N")){
+                        n = "yellow";
+                    }
+                
+                    if(yellowLettersArray.includes("O") && !greenLettersArray.includes("O")){
+                        o = "yellow";
+                    }
+                
+                    if(yellowLettersArray.includes("P") && !greenLettersArray.includes("P")){
+                        p = "yellow";
+                    }
+                
+                    if(yellowLettersArray.includes("Q") && !greenLettersArray.includes("Q")){
+                        q = "yellow";
+                    }
+                
+                    if(yellowLettersArray.includes("R") && !greenLettersArray.includes("R")){
+                        r = "yellow";
+                    }
+                
+                    if(yellowLettersArray.includes("S") && !greenLettersArray.includes("S")){
+                        s = "yellow";
+                    }
+                
+                    if(yellowLettersArray.includes("T") && !greenLettersArray.includes("T")){
+                        t = "yellow";
+                    }
+                
+                    if(yellowLettersArray.includes("U") && !greenLettersArray.includes("U")){
+                        u = "yellow";
+                    }
+                
+                    if(yellowLettersArray.includes("V") && !greenLettersArray.includes("V")){
+                        v = "yellow";
+                    }
+                
+                    if(yellowLettersArray.includes("W") && !greenLettersArray.includes("W")){
+                        w = "yellow";
+                    }
+                
+                    if(yellowLettersArray.includes("X") && !greenLettersArray.includes("X")){
+                        x = "yellow";
+                    }
+                
+                    if(yellowLettersArray.includes("Y") && !greenLettersArray.includes("Y")){
+                        y = "yellow";
+                    }
+                
+                    if(yellowLettersArray.includes("Z") && !greenLettersArray.includes("Z")){
+                        z = "yellow";
+                    }
             }
             
             checkGreenLetters();
