@@ -138,13 +138,27 @@ app.get("/", async (req, res) => {
 
     res.render("index.ejs");
 
-    app.post("/submit", (req, res) => {
+    app.post("/submit", async (req, res) => {
         userGuess = req.body["userGuess"];
         userGuess = userGuess.toUpperCase();
 
+        let userProperGuess = userGuess.toLowerCase();
+
+        let dictionaryGuess = await axios.get(`https://freedictionaryapi.com/api/v1/entries/en/${userProperGuess}`);
+
+        let isWordReal;
+        if(dictionaryGuess.data.entries[0]){
+            isWordReal = true;
+        }
+        else{
+            isWordReal = false;
+        }
+
+        console.log(dictionaryGuess.data.entries);
+
         console.log(`userGuess: ${userGuess}`);
 
-        if(userGuess.length == 5){
+        if(userGuess.length == 5 && isWordReal){
             timesSubmitted++;
             
             wordA = [word[0], word[1], word[2], word[3], word[4]];
@@ -900,9 +914,6 @@ app.get("/", async (req, res) => {
 
                 console.log(`Game won - took ${6-guessesLeft} guesses`);
                 finalStatement = `Game Won! in ${6-guessesLeft} Guesses`;
-
-                
-
 
             } else{
                 if(guessesLeft > 1){
